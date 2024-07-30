@@ -22,7 +22,8 @@ export const fetchMessages = async (): Promise<Message[]> => {
 export const sendMessage = async (payload: SendMessagePayload): Promise<SendMessageResponse> => {
   const response = await axios.post(`${API_URL}`, payload, {
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'x-functions-key': 'uSD01Ne8YrLaO2nQUNxGllBnpgfrRsCvAtW4n5ZtD84cAzFus7sZEg==',
     }
   });
   return response.data;
